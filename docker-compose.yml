@@ -11,7 +11,7 @@ services:
     command:
       - jupyterhub
     volumes:
-      - ./notebook-data:/home
+      - ./notebook-data:/home/etd
       - ./config:/srv/jupyterhub
     ports:
       - 3000:8000
