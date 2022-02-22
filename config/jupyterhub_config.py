@@ -692,6 +692,8 @@ c.JupyterHub.init_spawners_timeout = 100
 #  Default: 'jupyterhub.spawner.LocalProcessSpawner'
 # c.JupyterHub.spawner_class = 'jupyterhub.spawner.LocalProcessSpawner'
 
+c.JupyterHub.spawner_class = 'simple'
+
 # Path to SSL certificate file for the public facing interface of the proxy
 #
 #          When setting this, you should also set ssl_key
@@ -981,7 +983,7 @@ c.JupyterHub.init_spawners_timeout = 100
 #  Once a server has successfully been spawned, this is the amount of time we
 #  wait before assuming that the server is unable to accept connections.
 #  Default: 30
-# c.Spawner.http_timeout = 30
+c.Spawner.http_timeout = 100
 
 # The URL the single-user server should connect to the Hub.
 #
