@@ -1,0 +1,29 @@
+version: "3"
+services:
+  jupyter-server:
+    image: sirily11/juypyter-hub
+    build: 
+      context: .
+      dockerfile: ./build/dockerfile
+      args:
+        - user=etd
+        - password=etd
+    command:
+      - jupyterhub
+    volumes:
+      - ./notebook-data:/home
+      - ./config:/srv/jupyterhub
+    ports:
+      - 3000:8000
+      - 8083:8081
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    stdin_open: true
+    tty: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 10m
+        max-file: "3"
+        labels: "production_status"
+        env: "os"
