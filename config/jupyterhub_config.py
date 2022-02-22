@@ -445,7 +445,7 @@ c.JupyterHub.tornado_settings = {
 #
 #  .. versionadded: 1.1.0
 #  Default: 10
-# c.JupyterHub.init_spawners_timeout = 10
+c.JupyterHub.init_spawners_timeout = 100
 
 # The location to store certificates automatically created by
 #          JupyterHub.
