@@ -8,6 +8,9 @@ jupyterhub_cookie_secret
 *.ipynb
 *.tar
 .venv
-notebook-data
+
+/notebook-data/*
+!/notebook-data/readme.md
+
 *.db
 .DS_Store
